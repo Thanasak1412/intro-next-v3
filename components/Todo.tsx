@@ -1,12 +1,13 @@
 'use client';
 
 import { useTransition } from 'react';
+
 // types
 import { TodoProps } from '@/types/todo';
 // utils
 import { updateCompleted } from '@/utils/actions';
 
-export default function Todo({ todo }: { todo: TodoProps }) {
+export default function Todo({ todo }: Readonly<{ todo: TodoProps }>) {
   const [_, startTransition] = useTransition();
 
   const handleClick = () => {

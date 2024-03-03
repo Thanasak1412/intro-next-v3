@@ -4,7 +4,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-export default function DashboardLayout({ children }: Props) {
+export default function DashboardLayout({ children }: Readonly<Props>) {
   return (
     <div className="flex flex-col items-center justify-center gap-3">
       <div>

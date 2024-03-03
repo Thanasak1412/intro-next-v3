@@ -3,11 +3,10 @@ import { ReactNode } from 'react';
 
 type Props = {
   children: ReactNode;
-  meta?: ReactNode;
   title: string;
 };
 
-export default function Page({ children, title = '', meta }: Props) {
+export default function Page({ children, title = '' }: Readonly<Props>) {
   return (
     <>
       <Head>

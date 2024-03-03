@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
-import { Inter } from 'next/font/google';
 import './globals.css';
+
+import { Inter } from 'next/font/google';
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,7 +17,7 @@ const navLinks = [
   { href: '/docs', label: 'Docs' },
 ];
 
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body className={inter.className}>

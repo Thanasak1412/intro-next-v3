@@ -2,7 +2,7 @@ type Props = {
   params: { id: string };
 };
 
-export default function DocPage({ params }: Props) {
+export default function DocPage({ params }: Readonly<Props>) {
   return (
     <>
       <h1>DocPage</h1>

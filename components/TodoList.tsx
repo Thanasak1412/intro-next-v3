@@ -1,11 +1,12 @@
 import { TodoProps } from '@/types/todo';
+
 import Todo from './Todo';
 
 type Props = {
   todos: TodoProps[];
 };
 
-export default function TodoList({ todos }: Props) {
+export default function TodoList({ todos }: Readonly<Props>) {
   return (
     <>
       {todos.map((todo) => (

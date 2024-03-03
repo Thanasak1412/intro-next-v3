@@ -1,6 +1,7 @@
 import Link from 'next/link';
+
 // lib
-import { getUsers, getUser } from '../../../../lib/user';
+import { getUser, getUsers } from '../../../../lib/user';
 
 type Props = {
   params: {
@@ -8,7 +9,7 @@ type Props = {
   };
 };
 
-export default async function UserPage({ params }: Props) {
+export default async function UserPage({ params }: Readonly<Props>) {
   const { slug } = params;
   const { data } = await getUser(slug);
 

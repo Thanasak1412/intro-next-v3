@@ -1,5 +1,6 @@
-import db from '@/utils/db';
 import { NextResponse } from 'next/server';
+
+import db from '@/utils/db';
 
 export const GET = async () => {
   const todo = await db.todo.findMany();
